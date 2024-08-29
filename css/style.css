@@ -54,9 +54,7 @@
   margin-bottom: 10px;
 }
 
-#liste li:hover {
-  background-color: rgb(227, 235, 251);
-}
+
 
 #delete-btn {
   background-color: rgb(195, 195, 247);

@@ -39,13 +39,18 @@ document.addEventListener("DOMContentLoaded", function () {
         elem.style.backgroundColor = "";
       } else {
         selected.push(elem);
-        elem.style.backgroundColor = "#ddd";
+        elem.style.backgroundColor = "#e3ebfb";
       }
     }
   }
 
   function toggleButton() {
     knopf.textContent = edit ? "DELETE" : "ADD";
+
+    if (!edit){
+      liste.childNodes.forEach((elem) => elem.style.backgroundColor = "");
+      selected = [];
+    }
   }
 
   function deleteSelected() {
