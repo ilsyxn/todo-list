@@ -9,7 +9,14 @@ document.addEventListener("DOMContentLoaded", function () {
   function addTask() {
     if (eingabe.value != "") {
         let li = document.createElement("li");
-        li.textContent = eingabe.value;
+
+        if(eingabe.value == "Steinberger") {
+          let stein = document.createElement("img");
+          stein.setAttribute("src", "img/steinberger.png");
+          stein.setAttribute("width", 200);
+          li.appendChild(stein);
+        } else
+        {li.textContent = eingabe.value;}
 
         let buttonsContainer = document.createElement("div");
         buttonsContainer.appendChild(getPinButton(li));
