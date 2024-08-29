@@ -11,6 +11,23 @@
   border-radius: 5px;
 }
 
+#edit-btn {
+  background-color: rgb(87, 87, 215);
+  color: white;
+  border: none;
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+#add-btn:hover {
+  background-color: rgb(106, 106, 240);
+}
+
+#edit-btn:hover {
+  background-color: rgb(106, 106, 240);
+}
+
 #eingabe {
   height: 35px;
   width: 400px;
@@ -35,4 +52,18 @@
   padding: 10px 20px;
   border-radius: 3px;
   margin-bottom: 10px;
+}
+
+#liste li:hover {
+  background-color: rgb(227, 235, 251);
+}
+
+#delete-btn {
+  background-color: rgb(195, 195, 247);
+  border-radius: 5px;
+  border: none;
+}
+
+#delete-btn:hover {
+  background-color: rgb(214, 214, 253);
 }
