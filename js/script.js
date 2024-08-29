@@ -8,15 +8,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function addTask() {
     if (eingabe.value != "") {
-      let li = document.createElement("li");
-      li.textContent = eingabe.value;
-      li.appendChild(getDeleteButton());
-      li.addEventListener("click", function () {
-        select(li);
-      });
-      liste.appendChild(li);
-      eingabe.value = "";
+        let li = document.createElement("li");
+        li.textContent = eingabe.value;
+
+        let buttonsContainer = document.createElement("div");
+        buttonsContainer.appendChild(getPinButton(li));
+        buttonsContainer.appendChild(getDeleteButton());
+
+        li.appendChild(buttonsContainer);
+
+        li.addEventListener("click", function () {
+            select(li);
+        });
+
+        liste.appendChild(li);
+        eingabe.value = "";
     }
+  }
+
+  function getPinButton(li) {
+    let pin = document.createElement("button");
+    let icon = document.createElement("img");
+    pin.setAttribute("id", "pin-btn");
+    icon.setAttribute("src", "img/pin.png");
+    icon.setAttribute("width", "22");
+    pin.appendChild(icon);
+
+    pin.addEventListener("click", function (event) {
+      event.stopPropagation(); 
+      liste.removeChild(li);
+      liste.insertBefore(li, liste.firstChild); 
+    });
+
+    return pin;
   }
 
   function getDeleteButton() {
@@ -26,9 +50,12 @@ document.addEventListener("DOMContentLoaded", function () {
     icon.setAttribute("src", "img/trash.png");
     icon.setAttribute("width", "22");
     del.appendChild(icon);
-    del.addEventListener("click", function () {
-      liste.removeChild(del.parentNode);
+
+    del.addEventListener("click", function (event) {
+      event.stopPropagation(); // Verhindert, dass das Li-Element auch angeklickt wird
+      liste.removeChild(del.closest("li")); // Entfernt das Li-Element
     });
+
     return del;
   }
 
@@ -67,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
       deleteSelected();
     }
   });
+
   editBtn.addEventListener("click", function () {
     edit = !edit;
     toggleButton();
