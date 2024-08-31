@@ -1,11 +1,11 @@
-* {
+*{
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
 
-.box {
+.box{
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(135deg, rgb(7, 4, 95), rgb(35, 73, 54));
@@ -13,6 +13,7 @@
 }
 
 .todo-app {
+
   width: 100%;
   max-width: 540px;
   background-color: #fff;
@@ -21,31 +22,29 @@
   border-radius: 10px;
 }
 
-.todo-app h2 {
+.todo-app h2{
   color: rgb(18, 73, 61);
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
-
-.reihe {
+.reihe{
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #edeef0;
   border-radius: 30px;
+  padding-left: 20px;
   margin-bottom: 25px;
 }
 
-input {
+input{
   flex: 1;
   border: none;
   outline: none;
   background: transparent;
   padding: 10px;
-  margin-right: 10px; /* Fügt Abstand zwischen dem Eingabefeld und dem Button hinzu */
 }
-
 button {
   border: none;
   outline: none;
@@ -61,31 +60,11 @@ button:hover {
   background: #1813a6;
 }
 
-.liste ul {
-  padding-left: 0; /* Entfernt Standard-Padding des UL-Elements */
-}
-
-.liste ul li {
-  list-style: none;
-  font-size: 20px;
-  padding: 15px 10px; /* Reduziertes Padding für kompakteres Layout */
+.liste ul{
+  list-style: none; 
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
   user-select: none;
   cursor: pointer;
-  background-color: #edeef0;
-  margin-bottom: 10px; /* Weniger Margin zwischen den Listenelementen */
-  border-radius: 20px;
 }
 
-.checked-task {
-  text-decoration: line-through;
-  color: gray;
-}
-
-.liste ul li input {
-  margin-right: 10px;
-}
-
-.liste ul li input[type="checkbox"] {
-  width: 15px;
-  height: 15px;
-}
