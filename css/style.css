@@ -68,12 +68,31 @@ button:hover {
 .liste ul li {
   list-style: none;
   font-size: 20px;
-  padding: 15px 10px; /* Reduziertes Padding für kompakteres Layout */
+  padding: 15px 10px;
   user-select: none;
   cursor: pointer;
   background-color: #edeef0;
-  margin-bottom: 10px; /* Weniger Margin zwischen den Listenelementen */
+  margin-bottom: 10px;
   border-radius: 20px;
+  position: relative; /* Ermöglicht Positionierung des Buttons absolut */
+  padding-right: 70px; /* Mehr Platz für den Button */
+  word-wrap: break-word; /* Text umbrechen, wenn er den Container überläuft */
+  white-space: normal; /* Erlaubt Umbruch */
+}
+
+.del-btn {
+  position: absolute;
+  top: 10px;  /* Oben positionieren */
+  right: 10px; /* Rechts positionieren */
+  background: #0e0a8b;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.del-btn img {
+  width: 25px;
+  height: auto;
 }
 
 .checked-task {

@@ -8,12 +8,29 @@ document.addEventListener("DOMContentLoaded", function () {
         
         if (eingabe.value != "") {
             let li = document.createElement("li");
+            let del = document.createElement("button");
+            let icn = document.createElement("img");
+
+            icn.setAttribute("src", "img/trash.png");
+            icn.setAttribute("width", "25px");
+
+            del.appendChild(icn);
+            del.setAttribute("class", "del-btn");
+
+            del.addEventListener("click", function(event){
+                event.stopPropagation();
+                // Hier kannst du den Task löschen
+                li.remove();
+            });
+
             li.textContent = eingabe.value;
             li.setAttribute("class", "task");
             li.addEventListener("click", function(){
                 let newClass = (li.getAttribute("class") == "task") ? "checked-task" : "task";
                 li.setAttribute("class", newClass); 
             });
+
+            li.appendChild(del);
 
             eingabe.value = "";
 
