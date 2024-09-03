@@ -18,8 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
             del.setAttribute("class", "del-btn");
 
             del.addEventListener("click", function(event){
-                event.stopPropagation();
-                // Hier kannst du den Task löschen
                 li.remove();
             });
 

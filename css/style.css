@@ -69,6 +69,7 @@ button:hover {
   list-style: none;
   font-size: 20px;
   padding: 15px 10px;
+  padding-bottom: 20px;
   user-select: none;
   cursor: pointer;
   background-color: #edeef0;
@@ -93,6 +94,7 @@ button:hover {
 .del-btn img {
   width: 25px;
   height: auto;
+  
 }
 
 .checked-task {
