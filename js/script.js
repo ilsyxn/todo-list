@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       li.appendChild(del);
       todo.appendChild(li);
+      eingabe.value = "";
     }
   }
 
